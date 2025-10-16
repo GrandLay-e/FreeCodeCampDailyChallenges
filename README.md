@@ -1,4 +1,4 @@
-# FreeCodeCamp Python Challenges
+# FreeCodeCamp Daily Challenges in Python
 
 Welcome to the FreeCodeCamp Python Challenges repository — a place to learn and have fun with Python!  
 Here you'll find detailed solutions, explanations, and resources for a variety of Python challenges from [FreeCodeCamp](https://www.freecodecamp.org/learn/daily-coding-challenge/).
