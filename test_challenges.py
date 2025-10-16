@@ -52,3 +52,10 @@ def test_space_jam_spaces():assert space_jam("   free   Code   Camp   ") == "F  
 def test_space_jam_hello_world():assert space_jam("Hello World?!") == "H  E  L  L  O  W  O  R  L  D  ?  !"
 def test_space_jam_special_chars():assert space_jam("C@t$ & D0g$") == "C  @  T  $  &  D  0  G  $"
 def test_space_jam_allyourbase():assert space_jam("allyourbase") == "A  L  L  Y  O  U  R  B  A  S  E"
+
+#5________________________2025-08-15____________________________________
+# Test cases for jumble_text function
+def test_jumble_text_hello_world(): assert jbelmu("hello world") == "hello wlord"
+def test_jumble_text_love_jumbled_text(): assert jbelmu("i love jumbled text") == "i love jbelmud text"
+def test_jumble_text_freecodecamp(): assert jbelmu("freecodecamp is my favorite place to learn to code") == "faccdeeemorp is my faiortve pacle to laern to cdoe"
+def test_jumble_text_quick_brown_fox(): assert jbelmu("the quick brown fox jumps over the lazy dog") == "the qciuk borwn fox jmpus oevr the lazy dog"
