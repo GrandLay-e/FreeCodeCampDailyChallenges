@@ -41,3 +41,10 @@ def fibonacci_sequence(start_sequence, length):
     
     return sequence
 
+#______________________________2025-08-14_________________________________________
+#4 S P A C E J A M
+    """Given a string, remove all spaces from the string, insert two spaces between every character, 
+    convert all alphabetical letters to uppercase, and return the result.
+    """
+def space_jam(s):
+    return '  '.join(s.replace(' ', '').upper())
