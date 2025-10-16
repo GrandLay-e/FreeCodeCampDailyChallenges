@@ -31,3 +31,17 @@ def test_is_valid_number_lowercase_false(): assert is_valid_number("abc", 10) is
 def test_is_valid_number_lowercase_hex_true(): assert is_valid_number("abc", 16) is True
 def test_is_valid_number_mixedcase_hex_true(): assert is_valid_number("AbC", 16) is True
 def test_is_valid_number_lowercase_base36_true(): assert is_valid_number("z", 36) is True
+
+#3________________________2025-08-13____________________________________
+# Test cases for fibonacci_sequence function
+def test_fibonacci_sequence_20():
+    assert fibonacci_sequence([0, 1], 20) == [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181]
+def test_fibonacci_sequence_single():
+    assert fibonacci_sequence([21, 32], 1) == [21]
+def test_fibonacci_sequence_zero():
+    assert fibonacci_sequence([0, 1], 0) == []
+def test_fibonacci_sequence_two():
+    assert fibonacci_sequence([10, 20], 2) == [10, 20]
+def test_fibonacci_sequence_large_numbers():
+    assert fibonacci_sequence([123456789, 987654321], 5) == [123456789, 987654321, 1111111110, 2098765431, 3209876541]
+
