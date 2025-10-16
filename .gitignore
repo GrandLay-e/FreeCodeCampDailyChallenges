@@ -1,0 +1,10 @@
+*.json
+*.pyc
+__pycache__/
+.pytest_cache/
+env/
+venv/
+ENV/
+.venv/
+.idea/
+.vscode/
