@@ -45,3 +45,10 @@ def test_fibonacci_sequence_two():
 def test_fibonacci_sequence_large_numbers():
     assert fibonacci_sequence([123456789, 987654321], 5) == [123456789, 987654321, 1111111110, 2098765431, 3209876541]
 
+#4________________________2025-08-14____________________________________
+# Test cases for space_jam function
+def test_space_jam_freecodecamp():assert space_jam("freeCodeCamp") == "F  R  E  E  C  O  D  E  C  A  M  P"
+def test_space_jam_spaces():assert space_jam("   free   Code   Camp   ") == "F  R  E  E  C  O  D  E  C  A  M  P"
+def test_space_jam_hello_world():assert space_jam("Hello World?!") == "H  E  L  L  O  W  O  R  L  D  ?  !"
+def test_space_jam_special_chars():assert space_jam("C@t$ & D0g$") == "C  @  T  $  &  D  0  G  $"
+def test_space_jam_allyourbase():assert space_jam("allyourbase") == "A  L  L  Y  O  U  R  B  A  S  E"
