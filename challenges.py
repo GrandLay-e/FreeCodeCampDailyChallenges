@@ -48,3 +48,20 @@ def fibonacci_sequence(start_sequence, length):
     """
 def space_jam(s):
     return '  '.join(s.replace(' ', '').upper())
+
+#______________________________2025-08-15_________________________________________
+#5 Jumbled Text
+    """Given a string, return a jumbled version of that string where each word is transformed using the following constraints:
+
+    The first and last letters of the words remain in place
+    All letters between the first and last letter are sorted alphabetically.
+    The input strings will contain no punctuation, and will be entirely lowercase.
+    """
+def jbelmu(text):
+    def jumble_word(word):
+        if len(word) <= 2:
+            return word
+        middle = sorted(word[1:-1])
+        return word[0] + ''.join(middle) + word[-1]
+
+    return ' '.join(jumble_word(word) for word in text.split())
