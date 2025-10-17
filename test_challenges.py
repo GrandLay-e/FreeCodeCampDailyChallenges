@@ -59,3 +59,12 @@ def test_jumble_text_hello_world(): assert jbelmu("hello world") == "hello wlord
 def test_jumble_text_love_jumbled_text(): assert jbelmu("i love jumbled text") == "i love jbelmud text"
 def test_jumble_text_freecodecamp(): assert jbelmu("freecodecamp is my favorite place to learn to code") == "faccdeeemorp is my faiortve pacle to laern to cdoe"
 def test_jumble_text_quick_brown_fox(): assert jbelmu("the quick brown fox jumps over the lazy dog") == "the qciuk borwn fox jmpus oevr the lazy dog"
+
+#6________________________2025-08-16____________________________________
+# Test cases for areAnagrams function
+def test_are_anagrams_listen_silent(): assert are_anagrams("listen", "silent") is True
+def test_are_anagrams_school_master(): assert are_anagrams("School master", "The classroom") is True
+def test_are_anagrams_gentleman(): assert are_anagrams("A gentleman", "Elegant man") is True
+def test_are_anagrams_hello_world(): assert are_anagrams("Hello", "World") is False
+def test_are_anagrams_apple_banana(): assert are_anagrams("apple", "banana") is False
+def test_are_anagrams_cat_dog(): assert are_anagrams("cat", "dog") is False
