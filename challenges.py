@@ -65,3 +65,11 @@ def jbelmu(text):
         return word[0] + ''.join(middle) + word[-1]
 
     return ' '.join(jumble_word(word) for word in text.split())
+
+# ___________________________________2025-08-16___________________________________________
+#6 Anagram Checker
+    """Given two strings, determine if they are anagrams of each other (contain the same characters in any order)."""
+def are_anagrams(str1, str2):
+    s1 = str1.lower().replace(" ", "")
+    s2 = str2.lower().replace(" ", "")
+    return sorted(s1) == sorted(s2)
