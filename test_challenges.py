@@ -100,3 +100,11 @@ def test_squares_with_three_10(): assert squares_with_three(10) == 1
 def test_squares_with_three_100(): assert squares_with_three(100) == 19
 def test_squares_with_three_1000(): assert squares_with_three(1000) == 326
 def test_squares_with_three_10000(): assert squares_with_three(10000) == 4531
+
+#11______________________________2025-08-21_________________________________________
+# Test cases for mile_pace function
+def test_mile_pace_3_miles_24_00(): assert mile_pace(3, "24:00") == "08:00"
+def test_mile_pace_1_mile_06_45(): assert mile_pace(1, "06:45") == "06:45"
+def test_mile_pace_2_miles_07_00(): assert mile_pace(2, "07:00") == "03:30"
+def test_mile_pace_26_2_miles_120_35(): assert mile_pace(26.2, "120:35") == "04:36"
+

@@ -171,3 +171,29 @@ def squares_with_three(n:int) -> int:
         int: the count of numbers whose square contains at least one digit 3
     """
     return sum(1 for i in range(1, n+1) if '3' in str(i*i))
+
+#______________________________2025-08-21_________________________________________
+#11 Mile Pace
+def mile_pace(miles: float, duration: str) -> str:
+    """Given a number of miles ran, and a time in "MM:SS" (minutes:seconds) it took to run those miles, 
+    return a string for the average time it took to run each mile in the format "MM:SS".
+    
+    Args:
+        miles (float): distance in miles
+        duration (str): total time in format "MM:SS"
+        
+    Returns:
+        str: average pace per mile in format "MM:SS"
+    """
+    minutes, seconds = map(int, duration.split(':'))
+    total_seconds = minutes * 60 + seconds
+    
+    # Calculate seconds per mile
+    pace_seconds = total_seconds / miles
+    
+    # Convert to minutes:seconds format
+    pace_minutes = int(pace_seconds // 60)
+    pace_remaining_seconds = int(pace_seconds % 60)
+    
+    return f"{pace_minutes:02d}:{pace_remaining_seconds:02d}"
+
