@@ -93,3 +93,10 @@ def test_sum_of_squares_10(): assert sum_of_squares(10) == 385
 def test_sum_of_squares_25(): assert sum_of_squares(25) == 5525
 def test_sum_of_squares_500(): assert sum_of_squares(500) == 41791750
 def test_sum_of_squares_1000(): assert sum_of_squares(1000) == 333833500
+
+#10________________________2025-08-20____________________________________
+def test_squares_with_three_1(): assert squares_with_three(1) == 0
+def test_squares_with_three_10(): assert squares_with_three(10) == 1
+def test_squares_with_three_100(): assert squares_with_three(100) == 19
+def test_squares_with_three_1000(): assert squares_with_three(1000) == 326
+def test_squares_with_three_10000(): assert squares_with_three(10000) == 4531

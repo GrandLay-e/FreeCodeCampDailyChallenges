@@ -158,3 +158,16 @@ def sum_of_squares(n: int) -> int:
         int: the sum of squares from 1 to n
     """
     return sum(i*i for i in range(1, n+1))
+
+#___________________________________2025-08-20___________________________________________
+#10 3 Strikes
+def squares_with_three(n:int) -> int:
+    """Given an integer between 1 and 10,000, return a count of how many numbers from 1 up to that integer whose square contains at least one digit 3.
+
+    Args:
+        n (int): a integer between 1 and 10,000
+
+    Returns:
+        int: the count of numbers whose square contains at least one digit 3
+    """
+    return sum(1 for i in range(1, n+1) if '3' in str(i*i))
