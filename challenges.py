@@ -5,10 +5,16 @@
 
 #______________________________2025-08-11_________________________________________
 #1 Vowel Balance
-"""Given a string, determine whether the number of vowels in the first half of the string is equal 
-    to the number of vowels in the second half."""
-
-def is_balanced(s):
+def is_balanced(s: str) -> bool:
+    """Given a string, determine whether the number of vowels in the first half of the string is equal 
+    to the number of vowels in the second half.
+    
+    Args:
+        s (str): input string
+        
+    Returns:
+        bool: True if vowels are balanced, False otherwise
+    """
     vowels = 'aoiueAOIUE'
     mid = len(s) // 2
     midSecondIndex = mid if len(s) % 2 == 0 else mid + 1
@@ -16,10 +22,17 @@ def is_balanced(s):
 
 #______________________________2025-08-12_________________________________________
 #Base check
+def is_valid_number(n: str, base: int) -> bool:
     """Given a string representing a number, and an integer base from 2 to 36, 
     determine whether the number is valid in that base.
+    
+    Args:
+        n (str): string representation of number
+        base (int): base to check against (2-36)
+        
+    Returns:
+        bool: True if the number is valid in the given base, False otherwise
     """
-def is_valid_number(n, base):
     valid_chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"[:base]
     print( valid_chars)
     n = n.upper()
@@ -27,9 +40,16 @@ def is_valid_number(n, base):
 
 #______________________________2025-08-13_________________________________________
 #3 Fibonacci Sequence
+def fibonacci_sequence(start_sequence: list[int], length: int) -> list[int]:
     """The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones.
+    
+    Args:
+        start_sequence (list[int]): initial sequence of at least 2 numbers
+        length (int): desired length of the sequence
+        
+    Returns:
+        list[int]: fibonacci sequence of specified length
     """
-def fibonacci_sequence(start_sequence, length):
     if length <= 0:
         return []
     elif length <= len(start_sequence):
@@ -43,21 +63,32 @@ def fibonacci_sequence(start_sequence, length):
 
 #______________________________2025-08-14_________________________________________
 #4 S P A C E J A M
+def space_jam(s: str) -> str:
     """Given a string, remove all spaces from the string, insert two spaces between every character, 
     convert all alphabetical letters to uppercase, and return the result.
+    
+    Args:
+        s (str): input string
+        
+    Returns:
+        str: formatted string with double spaces between characters
     """
-def space_jam(s):
     return '  '.join(s.replace(' ', '').upper())
 
 #______________________________2025-08-15_________________________________________
 #5 Jumbled Text
+def jbelmu(text: str) -> str:
     """Given a string, return a jumbled version of that string where each word is transformed using the following constraints:
-
     The first and last letters of the words remain in place
     All letters between the first and last letter are sorted alphabetically.
     The input strings will contain no punctuation, and will be entirely lowercase.
+    
+    Args:
+        text (str): input text to jumble
+        
+    Returns:
+        str: jumbled text
     """
-def jbelmu(text):
     def jumble_word(word):
         if len(word) <= 2:
             return word
@@ -68,18 +99,33 @@ def jbelmu(text):
 
 # ___________________________________2025-08-16___________________________________________
 #6 Anagram Checker
-    """Given two strings, determine if they are anagrams of each other (contain the same characters in any order)."""
-def are_anagrams(str1, str2):
+def are_anagrams(str1: str, str2: str) -> bool:
+    """Given two strings, determine if they are anagrams of each other (contain the same characters in any order).
+    
+    Args:
+        str1 (str): first string
+        str2 (str): second string
+        
+    Returns:
+        bool: True if strings are anagrams, False otherwise
+    """
     s1 = str1.lower().replace(" ", "")
     s2 = str2.lower().replace(" ", "")
     return sorted(s1) == sorted(s2)
 
 #____________________________________2025-08-17____________________________________________
 #7 Targeted Sum
+def find_target(arr: list[int], target: int) -> list[int] | str:
     """Given an array of numbers and an integer target, find two unique numbers in the array that add up to the target value. 
     Return an array with the indices of those two numbers, or "Target not found" if no two numbers sum up to the target.
+    
+    Args:
+        arr (list[int]): list of numbers
+        target (int): target sum
+        
+    Returns:
+        list[int] | str: indices of the two numbers that add up to target, or error message
     """
-def find_target(arr, target) -> list | str:
     num_to_index = {}
     for index, num in enumerate(arr):
         complement = target - num
@@ -101,4 +147,3 @@ def factorial(n: int) -> int:
         int: the factorial of that number
     """
     return 1 if n == 0 else n * factorial(n - 1)
-
