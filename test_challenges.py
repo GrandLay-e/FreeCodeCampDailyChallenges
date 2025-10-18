@@ -85,3 +85,11 @@ def test_factorial_ten(): assert factorial(10) == 3628800
 def test_factorial_twenty(): assert factorial(20) == 2432902008176640000
 def test_factorial_small_numbers(): assert factorial(3) == 6
 def test_factorial_small_numbers_2(): assert factorial(4) == 24
+
+#9________________________2025-08-19____________________________________
+# Test cases for sum_of_squares function
+def test_sum_of_squares_5(): assert sum_of_squares(5) == 55
+def test_sum_of_squares_10(): assert sum_of_squares(10) == 385
+def test_sum_of_squares_25(): assert sum_of_squares(25) == 5525
+def test_sum_of_squares_500(): assert sum_of_squares(500) == 41791750
+def test_sum_of_squares_1000(): assert sum_of_squares(1000) == 333833500

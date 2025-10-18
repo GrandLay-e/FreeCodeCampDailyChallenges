@@ -147,3 +147,14 @@ def factorial(n: int) -> int:
         int: the factorial of that number
     """
     return 1 if n == 0 else n * factorial(n - 1)
+
+#___________________________________2025-08-19___________________________________________
+#9 Sum of Squares
+def sum_of_squares(n: int) -> int:
+    """Given a positive integer up to 1,000, return the sum of all the integers squared from 1 up to the number.
+    Args:
+        n (int): a positive integer up to 1,000
+    Returns:
+        int: the sum of squares from 1 to n
+    """
+    return sum(i*i for i in range(1, n+1))
