@@ -73,3 +73,17 @@ def are_anagrams(str1, str2):
     s1 = str1.lower().replace(" ", "")
     s2 = str2.lower().replace(" ", "")
     return sorted(s1) == sorted(s2)
+
+#____________________________________2025-08-17____________________________________________
+#7 Targeted Sum
+    """Given an array of numbers and an integer target, find two unique numbers in the array that add up to the target value. 
+    Return an array with the indices of those two numbers, or "Target not found" if no two numbers sum up to the target.
+    """
+def find_target(arr, target):
+    num_to_index = {}
+    for index, num in enumerate(arr):
+        complement = target - num
+        if complement in num_to_index:
+            return [num_to_index[complement], index]
+        num_to_index[num] = index
+    return "Target not found"

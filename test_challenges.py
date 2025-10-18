@@ -68,3 +68,10 @@ def test_are_anagrams_gentleman(): assert are_anagrams("A gentleman", "Elegant m
 def test_are_anagrams_hello_world(): assert are_anagrams("Hello", "World") is False
 def test_are_anagrams_apple_banana(): assert are_anagrams("apple", "banana") is False
 def test_are_anagrams_cat_dog(): assert are_anagrams("cat", "dog") is False
+
+#7________________________2025-08-17____________________________________
+# Test cases for find_target function
+def test_find_target_9():assert find_target([2, 7, 11, 15], 9) == [0, 1]
+def test_find_target_6():assert find_target([3, 2, 4, 5], 6) == [1, 2]
+def test_find_target_15():assert find_target([1, 3, 5, 6, 7, 8], 15) == [4, 5]
+def test_find_target_not_found():assert find_target([1, 3, 5, 7], 14) == 'Target not found'
