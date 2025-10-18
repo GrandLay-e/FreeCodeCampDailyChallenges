@@ -75,3 +75,13 @@ def test_find_target_9():assert find_target([2, 7, 11, 15], 9) == [0, 1]
 def test_find_target_6():assert find_target([3, 2, 4, 5], 6) == [1, 2]
 def test_find_target_15():assert find_target([1, 3, 5, 6, 7, 8], 15) == [4, 5]
 def test_find_target_not_found():assert find_target([1, 3, 5, 7], 14) == 'Target not found'
+
+#8________________________2025-08-18____________________________________
+# Test cases for factorial function
+def test_factorial_zero(): assert factorial(0) == 1
+def test_factorial_one(): assert factorial(1) == 1
+def test_factorial_five(): assert factorial(5) == 120
+def test_factorial_ten(): assert factorial(10) == 3628800
+def test_factorial_twenty(): assert factorial(20) == 2432902008176640000
+def test_factorial_small_numbers(): assert factorial(3) == 6
+def test_factorial_small_numbers_2(): assert factorial(4) == 24

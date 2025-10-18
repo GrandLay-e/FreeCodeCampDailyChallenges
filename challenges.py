@@ -79,7 +79,7 @@ def are_anagrams(str1, str2):
     """Given an array of numbers and an integer target, find two unique numbers in the array that add up to the target value. 
     Return an array with the indices of those two numbers, or "Target not found" if no two numbers sum up to the target.
     """
-def find_target(arr, target):
+def find_target(arr, target) -> list | str:
     num_to_index = {}
     for index, num in enumerate(arr):
         complement = target - num
@@ -87,3 +87,18 @@ def find_target(arr, target):
             return [num_to_index[complement], index]
         num_to_index[num] = index
     return "Target not found"
+
+#___________________________________2025-08-18___________________________________________
+#8 Factorializer
+def factorial(n: int) -> int:
+    """Given an integer from zero to 20, return the factorial of that number. 
+    The factorial of a number is the product of all the numbers between 1 and the given number.
+
+    Args:
+        n (int): given number
+
+    Returns:
+        int: the factorial of that number
+    """
+    return 1 if n == 0 else n * factorial(n - 1)
+
